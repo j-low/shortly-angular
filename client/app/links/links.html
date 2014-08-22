@@ -1,3 +1,17 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller="LinksController">
+	<nav class="navigation">
+      <a class="nav-link" href="#/links">Links</a>
+      <a class="nav-link" href="#/shorten">Shorten</a>
+      <a class="nav-link signout" ng-click="" href="#/signin">Sign Out</a>
+	</nav>
+    <input type="text" name="search" ng-model="search" placeholder="Search links"/>
+    <div class="link" ng-repeat="link in data.links | filter:search | orderBy: visits">  
+      <div class="info">
+       <div class="visits">
+         <span class="count">{{ link.visits }}</span>Visits
+       </div>
+       <div class="title">{{ link.title }}</div>
+       <div class="original">{{ link.url }}</div>
+      </div>
+    </div>
 </div>

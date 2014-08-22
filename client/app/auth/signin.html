@@ -1,9 +1,38 @@
-<div id='signin'>
-  <h1>sigin</h1>
+<div id='signin' ng-controller="AuthController">
+  <h2>Sign in</h2>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
-    <button>signin</button>
+    <input type='text' 
+    name="username" 
+    ng-model='user.username' 
+    placeholder="Enter username" 
+    required/>
+    <div class="errorContainer" ng-show="signupForm.username.$dirty && signupForm.username.$invalid">
+		<small class="error" ng-show="signupForm.username.$error.required">
+			Username required
+        </small>
+	</div>
+    <input type="password" 
+    name="password" 
+    ng-model='user.password' 
+    placeholder="Enter password" 
+    ng-minlength=6 
+    ng-maxlength=15
+    required />
+    <div class="errorContainer" ng-show="signupForm.password.$dirty && signupForm.password.$invalid">
+		<small class="error" ng-show="signupForm.password.$error.required">
+			Username required
+        </small>
+        <small class="error" ng-show="signupForm.password.$error.minlength">
+			Username too short
+        </small>
+        <small class="error" ng-show="signupForm.password.$error.maxlength">
+			Username too long
+        </small>	
+	</div>
+    <p ng-show="signupForm.password.$error.minlength">Please enter a valid password</p>
+    <button>Sign in</button>
   </form>
-  <a href="#/signup">Don't have an account? Signup ...</a>
+  <div>
+    <a class="nav-link" href="#/signup">Don't have an account? Sign up.</a>
+  </div>
 </div>

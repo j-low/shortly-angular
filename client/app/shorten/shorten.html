@@ -1,6 +1,15 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div id='container' ng-controller="ShortenController">
+  <nav class="navigation">
+    <a class="nav-link" href="#/links">Links</a>
+    <a class="nav-link" href="#/shorten">Shorten</a>
+    <a class="nav-link signout" ng-click="" href="#/signin">Sign Out</a>
+  </nav>
+  <form name="shortenForm" ng-submit="addLink(link)">
+    <input type="url" ng-model="link.url" placeholder="Enter a valid URL" required/>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 </div>
 
 

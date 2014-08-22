@@ -2,28 +2,43 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  background-color: #2B2130;
 }
 
 a {
-  color: #333;
+  color: #FF8977;
   font-size: 14px;
   text-decoration: none;
 }
 
 h1 {
+  font-size: 50px;
+  color: #FF8977;
+  padding-left: 5px;
+  horizontal-align: center; 
+}
+
+h2 {
+  padding-left: 10px;
   font-style: italic;
-  margin-bottom: 10px;
+  color: #FF8977;
+}
+
+small {
+  font-size: 10px;
+  color: #6E7B85;
+  font-style: italic;
+  font-family: arial, sans-serif;
 }
 
 .navigation {
   width: 100%;
   height: 40px;
-  background-color: #eee;
+  background-color: #322738;
 }
 
 .navigation ul {
   margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -46,6 +61,18 @@ h1 {
 
 .navigation li a.selected {
   background-color: #ccc;
+}
+
+.nav-link {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.signout {
+  float: right;
+  padding-right: 30px;
 }
 
 #container {
@@ -103,13 +130,36 @@ input {
   font-size: 13px;
   padding: 5px;
   margin-bottom: 5px;
+  background-color: 
 }
 
 input[type=url] {
   display: inline
 }
 
-
+button {
+  position: relative;
+  vertical-align: top;
+  width: 10%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color:white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #24E18A;
+  border: 0;
+  border-bottom: 2px solid #2f2e2e;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2f2e2e;
+  box-shadow: inset 0 -2px #2f2e2e;
+}
+button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .error {
   border: red solid 4px;
   padding: 10px;
@@ -141,3 +191,5 @@ input[type=url] {
 .creator .message {
   clear: both;
 }
+
+
